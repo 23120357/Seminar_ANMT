@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Sơ đồ mạng Wi-Fi IoT bằng biểu tượng thiết bị">
+<defs>
+<style>text{font-family:Arial,'Segoe UI',sans-serif;fill:#182b43}.title{font-size:38px;font-weight:700}.subtitle{font-size:19px;fill:#526981}.label{font-size:21px;font-weight:700}.small{font-size:16px;fill:#526981}.zone{stroke-width:2;rx:25}.wire{fill:none;stroke:#59738f;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.wifi{fill:none;stroke:#3085d5;stroke-width:4;stroke-linecap:round}.deny{stroke:#d35158;stroke-width:4;stroke-dasharray:9 8}.ok{stroke:#29986d;stroke-width:4}.icon{fill:#fff;stroke:#263d55;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.screen{fill:#d8edff;stroke:#263d55;stroke-width:4}.led{fill:#36c98b}</style>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29986d"/></marker>
+<symbol id="cloud" viewBox="0 0 130 90"><path class="icon" d="M31 74H102a20 20 0 0 0 2-40 34 34 0 0 0-66-6A24 24 0 0 0 31 74Z"/></symbol>
+<symbol id="firewall" viewBox="0 0 140 110"><rect class="icon" x="10" y="18" width="120" height="75" rx="8"/><path d="M10 48h120M10 72h120M50 18v30M88 48v24M44 72v21" class="wire"/><path d="M70 41l18 9v19c0 12-8 19-18 24-10-5-18-12-18-24V50Z" fill="#dff5e9" stroke="#29986d" stroke-width="3"/></symbol>
+<symbol id="switch" viewBox="0 0 150 90"><rect class="icon" x="5" y="20" width="140" height="55" rx="8"/><rect x="20" y="41" width="19" height="16" fill="#d8edff" stroke="#263d55" stroke-width="2"/><rect x="48" y="41" width="19" height="16" fill="#d8edff" stroke="#263d55" stroke-width="2"/><rect x="76" y="41" width="19" height="16" fill="#d8edff" stroke="#263d55" stroke-width="2"/><circle cx="122" cy="49" r="5" class="led"/></symbol>
+<symbol id="ap" viewBox="0 0 150 120"><path d="M35 80h80l12 25H23Z" class="icon"/><circle cx="75" cy="89" r="5" class="led"/><path d="M60 45a21 21 0 0 1 30 0M46 32a40 40 0 0 1 58 0M73 55a4 4 0 0 1 4 0" class="wifi"/></symbol>
+<symbol id="server" viewBox="0 0 100 135"><rect class="icon" x="16" y="5" width="68" height="125" rx="6"/><path d="M16 45h68M16 85h68" class="wire"/><circle cx="31" cy="25" r="5" class="led"/><circle cx="31" cy="65" r="5" class="led"/><circle cx="31" cy="105" r="5" class="led"/><path d="M47 25h22M47 65h22M47 105h22" stroke="#8aa4bc" stroke-width="4"/></symbol>
+<symbol id="laptop" viewBox="0 0 130 105"><rect class="screen" x="20" y="8" width="90" height="68" rx="5"/><path class="icon" d="M10 79h110l8 16H2Z"/></symbol>
+<symbol id="phone" viewBox="0 0 70 115"><rect class="icon" x="10" y="4" width="50" height="105" rx="8"/><rect x="16" y="17" width="38" height="74" fill="#d8edff"/><circle cx="35" cy="100" r="3" fill="#526981"/></symbol>
+<symbol id="camera" viewBox="0 0 145 110"><rect class="icon" x="18" y="18" width="93" height="54" rx="10"/><circle cx="77" cy="45" r="20" fill="#d8edff" stroke="#263d55" stroke-width="4"/><circle cx="77" cy="45" r="8" fill="#2b638c"/><path class="wire" d="M18 52H5M64 72v17H45m19 0v13"/></symbol>
+<symbol id="sensor" viewBox="0 0 110 110"><circle class="icon" cx="55" cy="55" r="38"/><circle cx="55" cy="55" r="11" fill="#36c98b"/><path d="M55 7v-5M55 108v-5M7 55H2M108 55h-5" class="wire"/></symbol>
+<symbol id="plug" viewBox="0 0 100 110"><rect class="icon" x="18" y="26" width="64" height="75" rx="11"/><path class="wire" d="M36 26V8M64 26V8"/><circle cx="50" cy="65" r="10" fill="#dff5e9" stroke="#29986d" stroke-width="3"/></symbol>
+<symbol id="eye" viewBox="0 0 120 90"><path class="icon" d="M5 45Q60-15 115 45 60 105 5 45Z"/><circle cx="60" cy="45" r="22" fill="#f6e3a8" stroke="#263d55" stroke-width="4"/><circle cx="60" cy="45" r="9" fill="#263d55"/></symbol>
+</defs>
+<rect width="1600" height="1000" fill="#f7fbff"/>
+<text x="65" y="65" class="title">SƠ ĐỒ MẠNG WI-FI CHO HỆ THỐNG IoT</text>
+<text x="67" y="96" class="subtitle">Thiết bị được tách vùng; firewall quyết định luồng truy cập; máy giám sát nhận log.</text>
+
+<use href="#cloud" x="130" y="137" width="130" height="90"/><text x="195" y="248" text-anchor="middle" class="label">Internet</text>
+<path d="M270 185H400" class="wire"/>
+<use href="#firewall" x="400" y="125" width="140" height="110"/><text x="470" y="257" text-anchor="middle" class="label">Firewall</text><text x="470" y="281" text-anchor="middle" class="small">ACL + ghi log</text>
+<path d="M540 185H700" class="wire"/>
+<use href="#switch" x="700" y="140" width="150" height="90"/><text x="775" y="257" text-anchor="middle" class="label">Switch VLAN</text>
+<path d="M850 185H975" class="wire"/>
+<use href="#ap" x="975" y="125" width="150" height="120"/><text x="1050" y="257" text-anchor="middle" class="label">Access Point</text>
+
+<path d="M775 231V320H1340V360" class="wire"/>
+<path d="M775 320H800V360" class="wire"/>
+<path d="M470 282V340H340V360" class="wire"/>
+
+<rect x="55" y="362" width="560" height="205" rx="25" fill="#e8f3ff" stroke="#79aee0" class="zone"/>
+<text x="82" y="401" class="label">VLAN 10 · USER · WPA3</text>
+<use href="#laptop" x="165" y="428" width="130" height="105"/><use href="#phone" x="377" y="420" width="70" height="115"/>
+<text x="335" y="552" text-anchor="middle" class="small">Máy người dùng</text>
+
+<rect x="645" y="362" width="360" height="205" rx="25" fill="#e8f8f1" stroke="#72cfa7" class="zone"/>
+<text x="675" y="401" class="label">VLAN 30 · MÁY CHỦ</text>
+<use href="#server" x="765" y="412" width="100" height="135"/>
+<text x="825" y="552" text-anchor="middle" class="small">Dashboard / MQTT</text>
+
+<rect x="1035" y="362" width="510" height="205" rx="25" fill="#fff5e6" stroke="#efc478" class="zone"/>
+<text x="1065" y="401" class="label">VLAN 40 · GIÁM SÁT</text>
+<use href="#server" x="1125" y="415" width="93" height="125"/><use href="#eye" x="1315" y="430" width="120" height="90"/>
+<text x="1290" y="552" text-anchor="middle" class="small">Log / IDS / cảnh báo</text>
+
+<path d="M1050 265V615" class="wire"/><path d="M250 615H1450" class="wire"/>
+<path d="M250 615V653M715 615V653M1180 615V653" class="wire"/>
+<rect x="55" y="655" width="390" height="235" rx="25" fill="#eaf5ff" stroke="#79aee0" class="zone"/>
+<text x="85" y="696" class="label">SSID USER</text><text x="85" y="720" class="small">VLAN 10 · WPA3</text>
+<use href="#laptop" x="130" y="746" width="130" height="105"/><use href="#phone" x="310" y="740" width="70" height="115"/>
+
+<rect x="470" y="655" width="390" height="235" rx="25" fill="#eaf8f2" stroke="#72cfa7" class="zone"/>
+<text x="500" y="696" class="label">SSID IOT-NEW</text><text x="500" y="720" class="small">VLAN 20 · WPA3</text>
+<use href="#camera" x="520" y="750" width="145" height="110"/><use href="#sensor" x="695" y="750" width="110" height="110"/>
+
+<rect x="885" y="655" width="390" height="235" rx="25" fill="#fff3e8" stroke="#e3ad77" class="zone"/>
+<text x="915" y="696" class="label">SSID IOT-LEGACY</text><text x="915" y="720" class="small">VLAN 21 · WPA2</text>
+<use href="#camera" x="930" y="750" width="145" height="110"/><use href="#plug" x="1110" y="748" width="100" height="110"/>
+
+<rect x="1300" y="655" width="245" height="235" rx="25" fill="#f1edff" stroke="#ad98e2" class="zone"/>
+<text x="1330" y="696" class="label">SSID GUEST</text><text x="1330" y="720" class="small">VLAN 50 · Internet</text>
+<use href="#phone" x="1387" y="748" width="70" height="115"/>
+
+<path d="M860 465H1035" class="ok" marker-end="url(#arr)"/><text x="945" y="450" text-anchor="middle" class="small">log</text>
+<path d="M615 465H645" class="ok" marker-end="url(#arr)"/>
+<text x="65" y="945" class="label" fill="#29986d">✓ IoT → máy chủ: chỉ các dịch vụ cần thiết</text>
+<text x="790" y="945" class="label" fill="#d35158">✕ IoT → máy người dùng: chặn bằng ACL</text>
+</svg>

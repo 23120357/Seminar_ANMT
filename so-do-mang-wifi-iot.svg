@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img" aria-label="Sơ đồ mạng bảo mật Wi-Fi IoT">
+<defs><style>
+text{font-family:Arial,'Segoe UI',sans-serif;fill:#eaf2ff} .title{font-size:39px;font-weight:700}.sub{font-size:21px;fill:#aabbd4}.head{font-size:25px;font-weight:700}.body{font-size:20px}.small{font-size:17px;fill:#bdcbe0}.box{stroke-width:2;rx:20}.line{fill:none;stroke:#8aa2c8;stroke-width:4}.allow{stroke:#42d6a4}.block{stroke:#ff7587;stroke-dasharray:11 8}.log{stroke:#f6c667;stroke-dasharray:8 8}
+</style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#8aa2c8"/></marker><marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#42d6a4"/></marker><marker id="yellow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#f6c667"/></marker></defs>
+<rect width="1600" height="1050" fill="#0b1426"/>
+<text x="80" y="75" class="title">MÔ HÌNH MẠNG WI-FI AN TOÀN CHO IoT</text>
+<text x="82" y="112" class="sub">Phân đoạn theo vai trò • ACL tại firewall • Giám sát tập trung</text>
+
+<rect x="670" y="145" width="260" height="76" fill="#19304a" stroke="#5b8ebc" class="box"/><text x="800" y="192" text-anchor="middle" class="head">INTERNET</text>
+<path d="M800 221V267" class="line" marker-end="url(#arrow)"/>
+<rect x="525" y="270" width="550" height="115" fill="#1c3150" stroke="#67a4e8" class="box"/>
+<text x="800" y="314" text-anchor="middle" class="head">ROUTER / FIREWALL</text>
+<text x="800" y="348" text-anchor="middle" class="body">Định tuyến VLAN • ACL mặc định chặn • Ghi log</text>
+<path d="M800 385V431" class="line" marker-end="url(#arrow)"/>
+<rect x="650" y="435" width="300" height="75" fill="#19304a" stroke="#5b8ebc" class="box"/><text x="800" y="482" text-anchor="middle" class="head">SWITCH VLAN</text>
+
+<path d="M650 472H365V545" class="line" marker-end="url(#arrow)"/>
+<path d="M950 472H1235V545" class="line" marker-end="url(#arrow)"/>
+<path d="M800 510V545" class="line" marker-end="url(#arrow)"/>
+<rect x="155" y="550" width="420" height="94" fill="#17304a" stroke="#62a8ef" class="box"/>
+<text x="365" y="590" text-anchor="middle" class="head">ACCESS POINT</text><text x="365" y="620" text-anchor="middle" class="small">Mỗi SSID gắn đúng VLAN</text>
+<rect x="610" y="550" width="380" height="94" fill="#153a39" stroke="#49d4aa" class="box"/>
+<text x="800" y="590" text-anchor="middle" class="head">MÁY CHỦ QUẢN LÝ</text><text x="800" y="620" text-anchor="middle" class="small">VLAN 30 • Dashboard / MQTT</text>
+<rect x="1025" y="550" width="420" height="94" fill="#463720" stroke="#f6c667" class="box"/>
+<text x="1235" y="590" text-anchor="middle" class="head">GIÁM SÁT / IDS</text><text x="1235" y="620" text-anchor="middle" class="small">VLAN 40 • Log / DNS / lưu lượng</text>
+
+<path d="M365 644V688H967M157 688V727M427 688V727M697 688V727M967 688V727" class="line"/>
+<rect x="35" y="733" width="245" height="145" fill="#1a324e" stroke="#70b8ff" class="box"/>
+<text x="157" y="772" text-anchor="middle" class="head">USER</text><text x="157" y="805" text-anchor="middle" class="body">VLAN 10 • WPA3</text><text x="157" y="837" text-anchor="middle" class="small">Laptop, điện thoại</text>
+<rect x="305" y="733" width="245" height="145" fill="#163c3e" stroke="#45d9b2" class="box"/>
+<text x="427" y="772" text-anchor="middle" class="head">IOT-NEW</text><text x="427" y="805" text-anchor="middle" class="body">VLAN 20 • WPA3</text><text x="427" y="837" text-anchor="middle" class="small">Thiết bị mới</text>
+<rect x="575" y="733" width="245" height="145" fill="#453524" stroke="#efbb65" class="box"/>
+<text x="697" y="772" text-anchor="middle" class="head">IOT-LEGACY</text><text x="697" y="805" text-anchor="middle" class="body">VLAN 21 • WPA2</text><text x="697" y="837" text-anchor="middle" class="small">Thiết bị cũ</text>
+<rect x="845" y="733" width="245" height="145" fill="#302d4e" stroke="#ad9aff" class="box"/>
+<text x="967" y="772" text-anchor="middle" class="head">GUEST</text><text x="967" y="805" text-anchor="middle" class="body">VLAN 50</text><text x="967" y="837" text-anchor="middle" class="small">Chỉ ra Internet</text>
+
+<rect x="1130" y="718" width="405" height="177" fill="#111f34" stroke="#425f83" class="box"/>
+<text x="1160" y="758" class="head">QUY TẮC CHÍNH</text>
+<circle cx="1168" cy="793" r="7" fill="#42d6a4"/><text x="1190" y="800" class="small">IoT → máy chủ: cổng cần thiết</text>
+<circle cx="1168" cy="830" r="7" fill="#ff7587"/><text x="1190" y="837" class="small">IoT → USER: chặn</text>
+<circle cx="1168" cy="867" r="7" fill="#f6c667"/><text x="1190" y="874" class="small">Firewall / AP → log giám sát</text>
+
+<path d="M1075 335C1195 350 1235 428 1235 550" class="line log" marker-end="url(#yellow)"/>
+<text x="90" y="960" class="body">Luồng giữa các VLAN phải đi qua firewall; SSID riêng chỉ có tác dụng khi gắn VLAN và ACL đúng.</text>
+<text x="90" y="997" class="small">Sơ đồ logic cho seminar • Cổng và đích truy cập cụ thể cần xác định theo thiết bị được chọn.</text>
+</svg>
